@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import HelloWorld from './../container/HelloWorld';
+import CounterComponent from './../container/CounterComponent'
 
 class App extends Component {
   render() {
     return (
-      <HelloWorld />
+    	<CounterComponent />
     );
   }
 }

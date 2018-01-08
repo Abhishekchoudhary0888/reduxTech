@@ -5,17 +5,19 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import helloReducer from './reducer'
+import counterReducers from './reducer'
 
 const storek = createStore(
-helloReducer,
+counterReducers,
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-let store = createStore(helloReducer);
+let store = createStore(counterReducers);
+
 
 ReactDOM.render(
 	<Provider store={store}>
 		<App />
-	</Provider>, document.getElementById('root'));
+	</Provider>
+	, document.getElementById('root'));
 registerServiceWorker();

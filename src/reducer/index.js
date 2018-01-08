@@ -1,19 +1,24 @@
+import * as Action from './../actions';
 import {combineReducers} from 'redux';
-import {HELLO_WORLD} from './../actions';
+import store from './../store';
 
-
-const helloWorld = ( state =  {message: 'hello'}, action) => {
-
+const counterReducer = ( state= store.counterReducer, action) => {
 
 	switch(action.type){
-		case HELLO_WORLD :
-			console.log('reducer hellowolrld');
-			return Object.assign({}, state, {message: 'Hello world'})
-		default:
-			return state
+		case Action.INCREMENT:
+			console.log('increment counter');
+			return Object.assign({}, state, {counter: state.counter+1});
+		case Action.DECREMENT:
+			console.log('decrement counter');
+			return Object.assign({}, state, {counter: state.counter-1});
+		default: 
+			return state		
 	}
-
 }
 
-const helloReducer = combineReducers({helloWorld});
-export default helloReducer;
+
+var counterReducers = combineReducers({
+	counterReducer
+});
+
+export default counterReducers;

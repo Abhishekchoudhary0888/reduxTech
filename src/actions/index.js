@@ -1,10 +1,14 @@
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
 
-export const HELLO_WORLD = 'HELLO_WORLD';
-
-export const helloWorld = () => {
-	console.log('helloworld action');
-	
+export const incrementFn = () => {
 	return {
-		type: HELLO_WORLD
+		type: INCREMENT
+	}
+}
+
+export const decrementFn = () => {
+	return {
+		type: DECREMENT
 	}
 }
