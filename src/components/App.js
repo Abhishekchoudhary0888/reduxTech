@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import HelloWorld from './../container/HelloWorld';
+
+import Header from './Header';
+import TodoBar from './TodoBar';
+import TodoList from './TodoList';
 
 class App extends Component {
   render() {
     return (
-      <HelloWorld />
+
+    	<div>
+	    	<Header />
+	    	{ this.props.children }
+    	</div>
     );
   }
 }
