@@ -5,14 +5,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import helloReducer from './reducer'
+import todoApp from './reducer'
 
-const storek = createStore(
-helloReducer,
-window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
 
-let store = createStore(helloReducer);
+let store = createStore(todoApp);
 
 ReactDOM.render(
 	<Provider store={store}>
