@@ -1,14 +1,14 @@
 import { inputValueUpdate } from '../actions/index';
 import store from '../store';
 
-const initialState = store.todoState;
+const initialState = store;
 
 const headerReducer = (state = initialState, action) => {
 	switch(action.type){
 		case inputValueUpdate().type :
-			return {...state}, {
+			return Object.assign({},state, {
 				inputVal: action.inputVal
-			}
+			})
 		default:
 			return state	
 	}

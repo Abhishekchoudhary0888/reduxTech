@@ -1,5 +1,5 @@
 const store= {
-	todoState : {},
+	todoState : [],
 };
 
 export default store;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import HeaderContainer from './../container/HeaderContainer';
-import Todo from './Todo';
+import TodoContainer from './../container/TodoContainer';
 
 class App extends Component {
   render() {
     return (
     	<div>
     		<HeaderContainer />
-    		<Todo />
+    		<TodoContainer />
     	</div>
     )
   }
