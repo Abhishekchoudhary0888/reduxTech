@@ -1,10 +1,32 @@
 
-export const HELLO_WORLD = 'HELLO_WORLD';
+let idCounter = 0;
 
-export const helloWorld = () => {
-	console.log('helloworld action');
-	
+export function inputValueUpdate (val) {
 	return {
-		type: HELLO_WORLD
+		type: 'INPUT_UPDATED',
+		inputVal: val
+	}
+}
+
+export function addTodo (text) {
+	return {
+		type: 'ADD_TODO',
+		id: idCounter++,
+		text
+	}
+}
+
+
+export function deleteTodo (id) {
+	return {
+		type: 'DELETE_TODO',
+		id
+	}
+}
+
+export function visibilityFilter (filter) {
+	return {
+		type: 'VISIBILITY_FILTER',
+		filter
 	}
 }

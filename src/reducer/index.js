@@ -1,19 +1,11 @@
 import {combineReducers} from 'redux';
-import {HELLO_WORLD} from './../actions';
+import todoReducer from './todoReducer';
+import headerReducer from './headerReducer';
 
 
-const helloWorld = ( state =  {message: 'hello'}, action) => {
+const appReducer = combineReducers({
+	todoReducer,
+	headerReducer
+})
 
-
-	switch(action.type){
-		case HELLO_WORLD :
-			console.log('reducer hellowolrld');
-			return Object.assign({}, state, {message: 'Hello world'})
-		default:
-			return state
-	}
-
-}
-
-const helloReducer = combineReducers({helloWorld});
-export default helloReducer;
+export default appReducer;

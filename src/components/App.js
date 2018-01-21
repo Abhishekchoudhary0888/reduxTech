@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import HelloWorld from './../container/HelloWorld';
+import HeaderContainer from './../container/HeaderContainer';
+import Todo from './Todo';
 
 class App extends Component {
   render() {
     return (
-      <HelloWorld />
-    );
+    	<div>
+    		<HeaderContainer />
+    		<Todo />
+    	</div>
+    )
   }
 }
 
